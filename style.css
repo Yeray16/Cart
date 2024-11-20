@@ -1,0 +1,82 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+
+th {
+  text-align: start;
+}
+
+thead th:not(:first-child),
+td {
+  text-align: end;
+}
+
+tbody td:first-child {
+  text-align: left;
+}
+
+thead {
+  border-block-end: 2px solid;
+  background: whitesmoke;
+}
+
+tfoot {
+  border-block: 2px solid;
+  background: whitesmoke;
+}
+
+th,
+td {
+  border: 1px solid lightgrey;
+  padding: 0.25rem 0.75rem;
+  vertical-align: baseline;
+}
+
+th:first-child {
+  position: sticky;
+  inset-inline-start: 0;
+  border-inline-end: none;
+}
+
+tbody th {
+  background: white;
+}
+
+thead th,
+tfoot th {
+  background: whitesmoke;
+}
+
+thead th {
+  vertical-align: bottom;
+}
+
+tr:hover {
+  background: whitesmoke;
+}
+
+tfoot th {
+  text-align: end;
+}
+
+td a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+td a:hover {
+  color: navy;
+}
+
+thead tr:first-child th {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: rgb(159, 199, 252);
+}
