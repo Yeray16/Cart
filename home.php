@@ -12,7 +12,6 @@
 </head>
 <body>
   <h1>Tabla de productos</h1>
-  <h2>Productos dentro del carrito: </h2>
   <?php
     try {
       
@@ -32,11 +31,25 @@
           $_SESSION['cart'][$productId]['quantity']++;
         } else{
           $stmtAddCart = $link->prepare('SELECT id, name, price FROM products WHERE id=:id');
-          $stmtAddCart->bindParam(':id', $produc)
+          $stmtAddCart->bindParam(':id', $productId);
+          $stmtAddCart->execute();
+          $product = $stmtAddCart->fetch(PDO::FETCH_OBJ);
+          $_SESSION['cart'][$product->id] = [
+            "name" => $product->name,
+            "price" => $product->price,
+            "quantity" => 1
+          ];
         }
 
-      }
+        $cartCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+
+      
   ?>
+  <h2>
+    Productos dentro del carrito:
+    <?php echo $cartCount; }?>
+  </h2>
+  <h2><a href="cart.php">Ver carrito</a></h2>
   <table>
     <thead>
       <tr>

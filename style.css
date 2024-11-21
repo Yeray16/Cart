@@ -80,3 +80,25 @@ thead tr:first-child th {
   font-size: 1.2rem;
   background-color: rgb(159, 199, 252);
 }
+
+button {
+  background: linear-gradient(90deg, rgb(159, 199, 252), rgb(104, 167, 250));
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+#vaciar{
+  background: linear-gradient(90deg, rgb(159, 199, 252), rgb(104, 167, 250));
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  margin-left: 620px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
